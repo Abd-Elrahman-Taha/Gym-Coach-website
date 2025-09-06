@@ -3,17 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="stylesheet.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
       background: #000;
       color: #fff;
     }
+    
+#nav-brand{
+    background-color: transparent;
+    margin-left: 20px;
+    font-size: 35px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background: linear-gradient( to right, white 10%, rgb(181, 145,48) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform .3s ease;
+}
+
+.navbar-nav a{
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: transform .3s ease;
+    margin-right: 15px;
+   
+}
+.navbar-nav a:hover,#nav-brand:hover{
+
+    color: white;
+    text-shadow: 0 0 10px rgb(181, 145,48),
+                 0 0 20px rgb(181, 145,48),
+                 0 0 30px rgb(181, 145,48);
+    transform: scale(1.25);
+            }
+ 
     .btn-custom {
       background-color: rgb(181, 145, 48);
       border: none;
@@ -24,38 +53,98 @@
     .btn-custom:hover {
       background-color: rgba(181,145,48,0.85);
     }
+    .image-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    .image-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    .image-box:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-<header id="head">
-  <nav class="navbar navbar-expand-lg  container animate__animated animate__fadeInUp col-12" id="nav1">
-    <div class="container-fluid">
-      <a class="navbar-brand" id="nav-brand">Big Ziad</a>
-
-      <!-- زرار التوجّل -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black animate__animated animate__fadeInUp">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#" id="nav-brand">Big Ziad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- اللينكات -->
-      <div class="collapse navbar-collapse animate__animated animate__fadeInUp" id="navbarNav1">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="sign.html">Sign in</a></li>
         </ul>
       </div>
     </div>
   </nav>
-</header>
 
-<section class="d-flex justify-content-center align-items-center col-12 col-lg-12 col-md-8 col-sm-4" style="height: 80vh;">
-  <button onclick="showAllImages('imagePaths')" class="btn btn-custom animate__animated animate__pulse animate__infinite" id="showImagesBtn">Press here</button>
-  <div id="imageContainer" class="col-lg-8 col-md-4 col-sm-2"></div>
-</section>
+  <!-- زرار -->
+  <section class="container text-center my-5 animate__animated animate__fadeInDown">
+    <button id="showImagesBtn" class="btn btn-custom">Press here</button>
+  </section>
 
-<script src="java.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- الصور -->
+  <section class="container my-4" id="imageSection" style="display: none;">
+    <div class="row g-4" id="imageContainer"></div>
+  </section>
+
+  <script>
+    const imagePaths = [
+      "Images/image1.jpg",
+      "Images/image2.jpg",
+      "Images/image3.jpg",
+      "Images/image4.jpg",
+      "Images/image5.jpg",
+      "Images/image6.jpg",
+      "Images/image7.jpg",
+      "Images/image8.jpg",
+      "Images/image9.jpg",
+      "Images/image10.jpg"
+    ];
+
+    document.getElementById("showImagesBtn").addEventListener("click", function () {
+      const imageSection = document.getElementById("imageSection");
+      const imageContainer = document.getElementById("imageContainer");
+
+      // امسح القديم
+      imageContainer.innerHTML = "";
+
+      // أضف الصور
+      imagePaths.forEach(src => {
+        const col = document.createElement("div");
+        col.className = "col-12 col-md-6 col-lg-4 col-xl-2 image-box"; 
+        // على الموبايل col-12 (صف واحد) 
+        // على الشاشات الوسط col-md-6 (اتنين جنب بعض) 
+        // على الكبيرة col-lg-4 / col-xl-2 (يتقسموا صفين × 5 صور)
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+
+        col.appendChild(img);
+        imageContainer.appendChild(col);
+      });
+
+      // اعرض الصور
+      imageSection.style.display = "block";
+
+      // حرّك الزرار فوق الصور (تحت الـ navbar)
+      const btnSection = document.querySelector("section.container.text-center");
+      document.querySelector("nav").insertAdjacentElement("afterend", btnSection);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

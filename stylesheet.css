@@ -7,7 +7,6 @@ body{
     background-color: black;
 }
 #nav-brand{
-   
     background-color: transparent;
     margin-left: 20px;
     font-size: 35px ;
@@ -169,65 +168,11 @@ body{
                  0 0 30px rgb(181, 145,48);
     }
 
-/* تنسيق الصور باستخدام بوتستراب */
-#imageContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.image-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease;
-}
-
-.image-box img {
-  width: 100%;
-  height: auto; 
-  border-radius: 15px;
-}
-
-.image-box:hover {
-  transform: scale(1.05);
-}
-
-.image-box img:hover {
-  transform: scale(1.1);
-}
-
-
-
 @media (max-width: 768px){
     #main{
         height: 800px;
     }
 
-#imageContainer{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 150px;
-}    
-.image-box {
-    width: auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease;
-}
 
-.image-box img {
-  width: 50%;
-  height: auto; 
-  border-radius: 15px;
-}
     
 }

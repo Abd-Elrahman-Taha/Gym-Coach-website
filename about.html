@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>About</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+    }
+    .btn-custom {
+      background-color: rgb(181, 145, 48);
+      border: none;
+      font-size: 1.2rem;
+      padding: 12px 40px;
+      border-radius: 8px;
+    }
+    .btn-custom:hover {
+      background-color: rgba(181,145,48,0.85);
+    }
+  </style>
+</head>
+<body>
+<header id="head">
+  <nav class="navbar navbar-expand-lg  container animate__animated animate__fadeInUp col-12" id="nav1">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="nav-brand">Big Ziad</a>
+
+      <!-- زرار التوجّل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- اللينكات -->
+      <div class="collapse navbar-collapse animate__animated animate__fadeInUp" id="navbarNav1">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="sign.html">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <button onclick="showAllImages('imagePaths')" class="btn btn-custom animate__animated animate__pulse animate__infinite" id="showImagesBtn">Press here</button>
+  <div id="imageContainer" class="mt-4"></div>
+</section>
+
+<script src="java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

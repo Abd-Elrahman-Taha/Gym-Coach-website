@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="stylesheet.css">
+     <script src="java.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Sign In</title>
+</head>
+<body>
+        
+<header id="head">
+    
+   <nav class="navbar navbar-expand-lg  container animate__animated animate__fadeInUp col-12" id="nav1">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="nav-brand">Big Ziad</a>
+
+    <!-- زرار التوجّل -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- اللينكات -->
+    <div class="collapse navbar-collapse animate__animated animate__fadeInUp" id="navbarNav1">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="sign.html">Sign in</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+    <section id="third-section">
+    
+<div class="container animate__animated animate__fadeInUp">
+  <h2 class="text-center mb-4"id="tranee"> تسجيل المتدربين</h2>
+
+  <div class="card p-4 mb-4" id="form">
+    <form id="traineeForm" class="row g-3" >
+      <div class="col-md-6">
+        <label for="traineeName" class="form-label">الاسم الثلاثي</label>
+        <input type="text" id="traineeName" class="form-control" name="name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="traineeWhatsapp" class="form-label">رقم الواتس</label>
+        <input type="text" id="traineeWhatsapp" class="form-control" name="telnum" required>
+      </div>
+      <div class="col-md-6">
+        <label for="traineePackage" class="form-label">الباقة</label>
+        <select id="traineePackage" class="form-select" name="package" required>
+          <option value="">اختر الباقة</option>
+          <option value="VIP PACKAGE">VIP PACKAGE</option>
+          <option value="GOLDEN PACKAGE">GOLDEN PACKAGE</option>
+          <option value="SILVER PACKAGE">SILVER PACKAGE</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="traineeWeight" class="form-label">وزنك الحالي (كجم)</label>
+        <input type="number" id="traineeWeight" class="form-control" name="weight" required>
+      </div>
+      <div class="col-md-6">
+        <label for="traineeDays" class="form-label">عدد أيام التدريب (آخر أسبوعين)</label>
+        <input type="number" id="traineeDays" class="form-control" name="days" required>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary px-5" name="submit" style="margin-top: 25px;"> حفظ البيانات</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="text-center mb-4">
+    <button id="showBtn" class="btn btn-secondary px-5" name="show"> عرض كل المتدربين</button>
+  </div>
+
+  <div id="output" class="row"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

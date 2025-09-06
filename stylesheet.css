@@ -168,176 +168,6 @@ body{
                  0 0 20px rgb(181, 145,48),
                  0 0 30px rgb(181, 145,48);
     }
-body{
-    width: auto;
-    height: auto;
-    background-color: black;
-}
-#head{
-    background-color: black;
-}
-#nav-brand{
-   
-    background-color: transparent;
-    margin-left: 20px;
-    font-size: 35px ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    background: linear-gradient( to right, white 10%, rgb(181, 145,48) 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: transform .3s ease;
-}
-
-#main{
-    
-  background-image: url("Images/Individual\ doing\ sport\ healthy\ lifestyle\ _\ AI-generated\ image.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  height: 715px;
-    width: auto;
-}
-
-.navbar-nav a{
-    color: white;
-    background-color: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    transition: transform .3s ease;
-    margin-right: 15px;
-   
-}
-.navbar-nav a:hover,#nav-brand:hover{
-
-    color: white;
-    text-shadow: 0 0 10px rgb(181, 145,48),
-                 0 0 20px rgb(181, 145,48),
-                 0 0 30px rgb(181, 145,48);
-    transform: scale(1.25);
-            }
- 
-#left-section{
-    background-color: transparent;
-}
-#right-section{
-    background-color: transparent;
-   
-
-   
-}
-
-#row1{
-    margin-top: 200px;
-}
-#row1 h1{
-    font-size: 70px; 
-    margin-left: 20px;
-    color:rgb(181, 145,48) ;
-}
-#row1 h2{
-    font-size: 70px; 
-    margin-left: 20px;  
-    color: white; 
-}
-
-#row2 h3{
-    font-size: 30px; 
-    margin-left: 20px;
-    color: white;   
-}
-#row3{
-    margin-top: 15px;
-    margin-left: 20px;
-    }
-#btn1{
-    height: 50px;
-    width: 150px;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    transition: all .3s ease;
-}
-#row1 h1,#row1 h2 ,#row2 h3{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#btn1 a{
-    color: white;
-    
-}
-
-#btn1:hover {
-     background-color: white;
-    transform: scale(1.1);
-    border: 2px solid white;
-    box-shadow: 0 0 20px white;
-}
-#btn1 a:hover{
-    color: rgb(181, 145,48);
-}
-    .social-icons{
-        justify-content: center;
-    }
-    .social-icons i {
-      font-size: 40px;
-      margin: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .social-icons i:hover {
-      transform: scale(1.2);
-    }
-    .fa-whatsapp { color: #25D366; }
-    .fa-facebook { color: #1877F2; }
-    .fa-instagram { 
-      color: #E1306C;
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: auto;
-      font-size: 14px;
-    }
-
-    #form{
-        background-color: transparent;
-        
-    }
-    #third-section{
-        background-color: black;
-        background: url("Images/WhatsApp\ Image\ 2025-09-06\ at\ 21.40.53_8b4a9755.jpg");
-        height: max-content;
-    }
-    #traineeForm{
-        color: white;
-
-    }
-    #traineeForm label{
-          text-shadow: 0 0 10px white,
-                 0 0 20px white,
-                 0 0 30px white;
-    }
-    #tranee{
-        color: rgb(181, 145,48);
-        transition: all .3s ease;
-          text-shadow: 0 0 10px rgb(181, 145,48),
-                 0 0 20px rgb(181, 145,48),
-                 0 0 30px rgb(181, 145,48);
-        
-    }
-    #tranee:hover{
-        transform: scale(1.1);
-          text-shadow: 0 0 10px rgb(181, 145,48),
-                 0 0 20px rgb(181, 145,48),
-                 0 0 30px rgb(181, 145,48);
-    }
 
 /* تنسيق الصور باستخدام بوتستراب */
 #imageContainer {
@@ -377,11 +207,27 @@ body{
     #main{
         height: 800px;
     }
+
+#imageContainer{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 60px;
+}    
+.image-box {
+    width: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
 }
 
-
-@media (max-width: 768px){
-    #main{
-        height: 800px;
-    }
+.image-box img {
+  width: 50%;
+  height: auto; 
+  border-radius: 15px;
+}
+    
 }

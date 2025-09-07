@@ -142,11 +142,14 @@ html, body {
         background-color: transparent;
         
     }
-    #third-section{
-        background-color: black;
-        background: url("Images/WhatsApp\ Image\ 2025-09-06\ at\ 21.40.53_8b4a9755.jpg");
-        height: max-content;
-    }
+   #third-section {
+  background: url("Images/WhatsApp\ Image\ 2025-09-06\ at\ 21.40.53_8b4a9755.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;   /* ✅ يغطي الشاشة كاملة */
+  padding-bottom: 0;   /* يشيل أي فراغ */
+  margin-bottom: 0;    /* يشيل أي فراغ */
+}
+
     #traineeForm{
         color: white;
 

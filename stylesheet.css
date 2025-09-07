@@ -1,8 +1,11 @@
-body{
-    width: auto;
-    height: auto;
-    background-color: black;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* يمنع السكرول يمين */
 }
+
 #head{
     background-color: black;
 }
@@ -18,15 +21,18 @@ body{
     transition: transform .3s ease;
 }
 
-#main{
+#first-section{
     
   background-image: url("Images/Individual\ doing\ sport\ healthy\ lifestyle\ _\ AI-generated\ image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 715px;
-    width: auto;
+  width: 100%;        
+  max-width: 100%;
+  height: auto;       
+  min-height: 100vh;  
+
 }
 
 .navbar-nav a{
@@ -40,6 +46,7 @@ body{
     margin-left: 15px;
    
 }
+
 .navbar-nav a:hover,#nav-brand:hover{
 
     color: white;
@@ -135,6 +142,7 @@ body{
       padding: 15px;
       margin-top: auto;
       font-size: 14px;
+      max-width: 100%;
     }
 
     #form{
@@ -169,9 +177,7 @@ body{
                  0 0 20px rgb(181, 145,48),
                  0 0 30px rgb(181, 145,48);
     }
-.navbar-toggler-icon {
 
-}
 @media (max-width: 768px){
     #main{
         height: 800px;

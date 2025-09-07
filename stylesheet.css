@@ -170,12 +170,13 @@ html, body {
     }
 
 @media (max-width: 768px) {
-    /* الغي الخلفية المثبتة عشان الموبايل */
-    #first-section {
-        background-attachment: scroll;
-        background-position: center;
+   .social-icons i {
+      font-size: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    /* خلي النصوص أصغر */
    
 }

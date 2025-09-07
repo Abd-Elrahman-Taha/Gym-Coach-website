@@ -20,7 +20,6 @@ html, body {
     -webkit-text-fill-color: transparent;
     transition: transform .3s ease;
 }
-
 #first-section{
     
   background-image: url("Images/Individual\ doing\ sport\ healthy\ lifestyle\ _\ AI-generated\ image.jpeg");
@@ -34,6 +33,7 @@ html, body {
   min-height: 100vh;  
 
 }
+
 
 .navbar-nav a{
     color: white;
@@ -105,11 +105,13 @@ html, body {
 
 #btn1 a{
     color: white;
+    text-decoration: none;
     
 }
 
 #btn1:hover {
      background-color: white;
+     color: rgb(181, 145,48);
     transform: scale(1.1);
     border: 2px solid white;
     box-shadow: 0 0 20px white;
@@ -177,6 +179,36 @@ html, body {
       cursor: pointer;
       transition: 0.3s;
     }
+#row1{
+    margin-top: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    
+}
+#row3{
+    display: flex;
+   
+  
+}
+#row2,#row3,#contact{
+    text-align: center;
+    justify-content: center;
+     margin-left: 0px;
+    margin-right: 0px;
+}
+  #row1 h1, #row1 h2 ,#row2 h3 {
+        margin-left: 0;       /* إزالة الهامش الأيسر للنصوص */
+    }
+    
+     .social-icons {
+        display: flex;
+        justify-content: center;  /* توسيط الأيقونات */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
 
    
 }

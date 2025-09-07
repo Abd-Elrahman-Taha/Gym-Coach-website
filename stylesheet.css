@@ -37,6 +37,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: transform .3s ease;
     margin-right: 15px;
+    margin-left: 15px;
    
 }
 .navbar-nav a:hover,#nav-brand:hover{
@@ -46,7 +47,7 @@ body{
                  0 0 20px rgb(181, 145,48),
                  0 0 30px rgb(181, 145,48);
     transform: scale(1.1);
-    margin-left: 15px;
+    
             }
  
 #left-section{

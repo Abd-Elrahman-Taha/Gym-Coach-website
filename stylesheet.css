@@ -178,9 +178,13 @@ html, body {
                  0 0 30px rgb(181, 145,48);
     }
 
-@media (max-width: 768px){
-    #main{
-        height: 800px;
+@media (max-width: 768px) {
+    /* الغي الخلفية المثبتة عشان الموبايل */
+    #first-section {
+        background-attachment: scroll;
+        background-position: center;
     }
-    
+
+    /* خلي النصوص أصغر */
+   
 }

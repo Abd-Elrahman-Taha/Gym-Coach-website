@@ -72,7 +72,6 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black animate__animated animate__fadeInUp">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3" href="#" id="nav-brand">Big Ziad</a>
@@ -90,12 +89,10 @@
     </div>
   </nav>
 
-  <!-- زرار -->
   <section class="container text-center my-5 animate__animated animate__fadeInDown">
     <button id="showImagesBtn" class="btn btn-custom">Press here</button>
   </section>
 
-  <!-- الصور -->
   <section class="container my-4" id="imageSection" style="display: none;">
     <div class="row g-4" id="imageContainer"></div>
   </section>
@@ -118,17 +115,14 @@
       const imageSection = document.getElementById("imageSection");
       const imageContainer = document.getElementById("imageContainer");
 
-      // امسح القديم
+   
       imageContainer.innerHTML = "";
 
-      // أضف الصور
+     
       imagePaths.forEach(src => {
         const col = document.createElement("div");
         col.className = "col-12 col-md-6 col-lg-4 col-xl-2 image-box"; 
-        // على الموبايل col-12 (صف واحد) 
-        // على الشاشات الوسط col-md-6 (اتنين جنب بعض) 
-        // على الكبيرة col-lg-4 / col-xl-2 (يتقسموا صفين × 5 صور)
-
+        
         const img = document.createElement("img");
         img.src = src;
         img.alt = "";
@@ -137,10 +131,8 @@
         imageContainer.appendChild(col);
       });
 
-      // اعرض الصور
       imageSection.style.display = "block";
 
-      // حرّك الزرار فوق الصور (تحت الـ navbar)
       const btnSection = document.querySelector("section.container.text-center");
       document.querySelector("nav").insertAdjacentElement("afterend", btnSection);
     });

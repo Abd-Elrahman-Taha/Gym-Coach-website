@@ -45,7 +45,8 @@ body{
     text-shadow: 0 0 10px rgb(181, 145,48),
                  0 0 20px rgb(181, 145,48),
                  0 0 30px rgb(181, 145,48);
-    transform: scale(1.25);
+    transform: scale(1.1);
+    margin-left: 15px;
             }
  
 #left-section{
@@ -174,7 +175,5 @@ body{
     #main{
         height: 800px;
     }
-
-
     
 }

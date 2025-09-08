@@ -184,6 +184,9 @@ html, body {
       cursor: pointer;
       transition: 0.3s;
     }
+    .navbar-nav{
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    }
 #row1{
     margin-top: 15px;
     margin-left: 0px;
